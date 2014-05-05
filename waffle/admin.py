@@ -1,5 +1,6 @@
 from django.contrib import admin
 
+from project import admin as varle_admin
 from waffle.models import Flag, Sample, Switch
 
 
@@ -57,6 +58,6 @@ class SampleAdmin(admin.ModelAdmin):
     ordering = ('-id',)
 
 
-admin.site.register(Flag, FlagAdmin)
-admin.site.register(Sample, SampleAdmin)
-admin.site.register(Switch, SwitchAdmin)
+varle_admin.site.register(Flag, FlagAdmin)
+varle_admin.site.register(Sample, SampleAdmin)
+varle_admin.site.register(Switch, SwitchAdmin)
